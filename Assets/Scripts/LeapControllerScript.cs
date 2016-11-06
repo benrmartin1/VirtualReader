@@ -29,7 +29,7 @@ public class LeapControllerScript : MonoBehaviour {
                 print("grab angle " + theHand.GrabAngle);
                 print("palm position " + theHand.PalmPosition);
                 print("palm veloctiy " + theHand.PalmVelocity);
-                print("rotation" + theHand.Rotation)
+                print("rotation" + theHand.Rotation);
           
             }
         }
