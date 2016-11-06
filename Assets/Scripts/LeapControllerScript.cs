@@ -35,10 +35,10 @@ public class LeapControllerScript : MonoBehaviour {
 
                 float pinchDistance = theHand.PinchDistance;
                 float pinchStrength = theHand.PinchStrength;
-                print("pinch strength" + pinchStrength);
+                print("pinch strength" + pinchDistance);
 
-
-                page.localScale = page.localScale * pinchDistance;
+                Vector3 zoomVector = Vector3.one * pinchDistance / 20;
+                page.localScale = zoomVector;
 
             }
         }
