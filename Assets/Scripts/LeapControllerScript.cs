@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class LeapControllerScript : MonoBehaviour {
 
     Controller m_leapController;
+    public Transform page;
 
     // Use this for initialization
     void Start () {
@@ -30,7 +31,15 @@ public class LeapControllerScript : MonoBehaviour {
                 print("palm position " + theHand.PalmPosition);
                 print("palm veloctiy " + theHand.PalmVelocity);
                 print("rotation" + theHand.Rotation);
-          
+
+
+                float pinchDistance = theHand.PinchDistance;
+                float pinchStrength = theHand.PinchStrength;
+                print("pinch strength" + pinchStrength);
+
+
+                page.localScale = page.localScale * pinchDistance;
+
             }
         }
     }
